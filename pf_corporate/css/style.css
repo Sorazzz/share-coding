@@ -1,0 +1,1091 @@
+/* ===================== 全共通 ===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Helvetica', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    font-size: 15px;
+    color: #000000;
+}
+
+/* ===================== wrapper ===================== */
+
+.wrapper-900 {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.wrapper-1440 {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===================== margin / padding ===================== */
+
+.mg-r-30 {
+    margin-right: 30px;
+}
+
+.mg-b-30 {
+    margin-bottom: 30px;
+}
+
+.mg-b-60 {
+    margin-bottom: 30px;
+}
+
+.mg-tb-30 {
+    margin: 30px 0;
+}
+
+.mg-b-100 {
+    margin-bottom: 100px;
+}
+
+.pd-tb-120 {
+    padding: 120px 0;
+}
+
+/* ===================== ttl ===================== */
+
+.ttl-en {
+    font-size: 60px;
+    color: #2710D5;
+}
+
+.ttl-ja {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.section-ttl {
+    margin-bottom: 60px;
+}
+
+.ttl-30 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ===================== color ===================== */
+
+.col-white {
+    color: #fff;
+}
+
+/* ===================== header ===================== */
+
+.header-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 50%;                /* 画面の中央 */
+    transform: translateX(-50%); /* 自分の幅の半分左にずらす */
+    z-index: 999;
+    padding: 0 100px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu-item {
+    padding: 0px 15px;
+    list-style: none;
+}
+
+.header-menu-item > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-line {
+    display: block;
+    width: 1px;
+    height: 26px;
+    background-color: #CCC;
+    margin: 0 30px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.sns-icon {
+    display: inline-block;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.header-tab {
+    display: none;
+}
+
+/* ===================== hero ===================== */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 32%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-ttl-en {
+    font-size: 100px;
+    color: #fff;
+}
+
+.hero-ttl-ja {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* ===================== mission ===================== */
+
+#mission {
+    color: #fff;
+    background-image: url('../images/mission-back.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.mission-wrapper {
+    display: flex;
+}
+
+.mission-ttl {
+    padding: 100px 250px 0 0;
+}
+
+.mission-content {
+    max-width: 930px;
+    width: 100%;
+    padding: 100px 0;
+}
+
+.mission-line {
+    border-bottom: #fff 1px solid;
+}
+
+/* ===================== project ===================== */
+
+.project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-content {
+    width: 47%;
+}
+
+.project-image {
+    width: 100%;
+}
+
+/* ===================== aboutus ===================== */
+
+.aboutus-ttl-tablet {
+    display: none;
+}
+
+#aboutus {
+    min-height: 100vh;
+    background-color: #F8F8F8;
+}
+
+.aboutus-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.aboutus-image {
+    width: 910px;
+    height: 910px;
+    background-image: url('../images/index-mission.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aboutus-image > img {
+    width: 100%;
+}
+
+.aboutus-text {
+    max-width: 670px;
+    width: 100%;
+}
+
+.aboutus-content {
+    margin: 30px 0;
+}
+
+.aboutus-ttl {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.ttl-num {
+    font-size: 15px;
+    font-weight: bold;
+    color: #2710D5;
+}
+
+.aboutus-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+
+.aboutus-text > span:nth-of-type(3) {
+    margin: 0;
+}
+
+/* ===================== vision ===================== */
+
+#vision {
+    color: #fff;
+    background-image: url('../images/vision-back.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.vision-content {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vision-item {
+    width: 48%;
+    padding: 30px 30px 70px 30px;
+    border: #fff 1px solid;
+}
+
+.vision-ttl {
+    margin-bottom: 30px;
+}
+
+.ttl-num-2 {
+    display: block;
+    text-align: right;
+    margin-bottom: 16px;
+}
+
+.ttl-en-s {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.mg-rb-30 {
+    margin: 0 30px 30px 0;
+}
+
+/* ===================== company ===================== */
+
+.company-wrapper {
+    display: flex;
+}
+
+.company-info {
+    max-width: 670px;
+    width: 100%;
+    border-collapse: collapse; /* 重なった線を1本にまとめる */
+    margin-right: 100px;
+}
+
+.company-info th, .company-info td {
+    border-bottom:#ccc 1px solid;    /* 各セルの罫線 */
+    text-align: left;
+    padding: 30px 0;
+}
+
+.company-info th {
+    font-weight: bold;
+    margin-right: 100px;
+}
+
+.googlemap {
+    width: 670px;
+    height: 447px;
+}
+
+/* ===================== contact ===================== */
+
+#contact {
+    background-color: #F8F8F8;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #BBB; /* 任意の色に変更 */
+}
+
+input {
+    width: 900px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+input[type="checkbox"],input[type="radio"] {
+    width: auto;
+    height: auto;
+    transform: scale(1.5);
+    border: 1px solid #CCCCCC;
+}
+
+.error {
+    color: #DD2929;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;      /* 垂直中央揃え */
+    gap: 50px;                /* 各チェック項目の間隔 */
+    flex-wrap: wrap;          /* 画面が狭い時に折り返し可 */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* チェックボックスとテキストの隙間 */
+}
+
+textarea {
+    width: 900px;
+    height: 155px;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+.required-icon {
+    width: 46px;
+    height: 23px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #DD2929;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.contact-item {
+    margin: 30px 0;
+}
+
+.item-ttl {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.privacy-scroll {
+    width: 900px;
+    height: 235px;
+    overflow-y: scroll;
+    padding: 10px 20px;
+    background-color: #DDD;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.privacy-item {
+    margin: 15px 0;
+}
+
+.privacy-ttl {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.privacy-text {
+    margin-bottom: 30px;
+}
+
+.privacy-list {
+    padding-left: 20px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;  /* 横中央 */
+    margin-top: 60px;         /* 上に余白を追加（必要なら） */
+}
+
+/* ===================== button ===================== */
+
+.button-main {
+    width: 500px;
+    height: 80px;
+    background-color: #0A005A;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url('../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+.hover {
+    transition: ease all 0.35s;
+}
+
+.hover:hover {
+    opacity: 0.8;
+}
+
+/* ===================== footer ===================== */
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 60px 0;
+    padding: 0;
+}
+
+.footer-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 300px;
+}
+
+.footer-menu {
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-menu-item {
+    padding: 0px 15px;
+    list-style: none;
+}
+
+.footer-menu-item > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-pc {
+    font-size: 11px;
+    color: #777;
+}
+
+.copyright-sp {
+    display: none;
+}
+
+/* ===================== thanks.html ===================== */
+
+.thanks{
+    padding: 240px 0 120px 0;
+}
+
+.br-tab {
+    display: none;
+}
+
+.button2 {
+    width: 500px;
+    height: 80px;
+    background-color: #fff;
+    border: #0A005A 1px solid;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    background-image: url('../images/arrow02.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+.button2 > a {
+    color: #0A005A;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+　　タブレット用
+===================================================== */
+
+@media screen and (max-width: 1023px) {
+
+/* ------ wrapper ------ */
+
+.wrapper-900, .wrapper-1440, .footer-wrapper {
+    width: 100%;
+    padding: 0 50px;
+}
+
+/* ------ margin / padding ------ */
+
+.mg-b-100 {
+    margin-bottom: 60px;
+}
+
+.pd-tb-120 {
+    padding: 80px 0;
+}
+
+/* ------ header ------ */
+
+.header-tab {
+    width: 87%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: flex;
+}
+
+.header-wrapper {
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F8F8F8;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 998;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0 50px;
+}
+
+.hamburger {
+    width: 30px;
+    height: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    background-color: #000;
+    display: block;
+    transition: 0.3s ease;
+}
+
+/* メニューが開いたときの変形（×） */
+.hamburger.is-active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.header-wrapper.active {
+    transform: translateX(0);
+}
+
+.header-right {
+    align-items: stretch;
+    justify-content: start;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.header-menu {
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.header-menu-item {
+    padding: 30px 0;
+    border-bottom: #ccc 1px solid;
+}
+
+.header-line, .logo-none {
+    display: none;
+}
+
+header .sns-content {
+    margin-top: 40px;
+}
+
+/* ------ hero ------ */
+
+.hero-text {
+    bottom: -5%;
+    left: 38%;
+}
+
+.hero-ttl-en {
+    font-size: 86px;
+}
+
+.hero-ttl-ja {
+    font-size: 19px;
+}
+
+/* ------ mission ------ */
+
+.mission-wrapper {
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+
+.mission-ttl {
+    padding-top: 80px;
+    margin-bottom: 20px;
+}
+
+.mission-content {
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* ------ aboutus ------ */
+
+.aboutus-wrapper {
+    width: 100%;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.aboutus-wrapper > .section-ttl {
+    margin: 0;
+}
+
+.aboutus-ttl-pc {
+    display: none;
+}
+
+.aboutus-ttl-tablet {
+    display: block;
+    padding-left: 50px;
+}
+
+.aboutus-image {
+    width: 335px;
+    height: 335px;
+}
+
+.aboutus-text {
+    max-width: 1023px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 40px;
+}
+
+/* ------ vision ------ */
+
+.vision-content {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.vision-item {
+    width: 48%;
+}
+
+.mg-rb-30 {
+    margin: 0 0 30px 0;
+}
+
+/* ------ company ------ */
+
+.company-wrapper {
+    flex-wrap: wrap;
+}
+
+#company > .wrapper-1440 > .section-ttl {
+    margin-bottom: 30px;
+}
+
+.company-info {
+    max-width: 1023px;
+    margin: 0 0 30px 0;
+}
+
+.googlemap {
+    width: 100%;
+    height: 681px;
+}
+
+/* ------ contact ------ */
+
+input, textarea, .privacy-scroll {
+    width: 100%;
+}
+
+/* ------ footer ------ */
+
+.footer-wrapper {
+    margin: 60px 0 80px 0;
+}
+
+.footer-top {
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-menu {
+    width: 100%;
+}
+
+/* ------ thanks.html ------ */
+
+.thanks{
+    padding: 150px 0 80px 0;
+    background-color: #F6F6F6;
+}
+
+.br-pc {
+    display: none;
+}
+
+.br-tab {
+    display: block;
+    text-align: center;
+}
+
+}
+
+/* =====================================================
+　　スマホ用
+===================================================== */
+
+@media screen and (max-width: 767px) {
+
+/* ------ 全共通 ------ */
+.wrapper-900, .wrapper-1440 {
+    padding: 0 20px;
+}
+
+.footer-wrapper {
+    padding: 0;
+}
+
+.mg-b-30 {
+    margin-bottom: 20px;
+}
+
+.mg-tb-30 {
+    margin: 20px 0;
+}
+
+.mg-b-100 {
+    margin-bottom: 40px;
+}
+
+.pd-tb-120 {
+    padding: 50px 0;
+}
+
+/* ------ ttl ------ */
+
+.ttl-en {
+    font-size: 38px;
+}
+
+.ttl-ja {
+    font-size: 13px;
+}
+
+.section-ttl {
+    margin-bottom: 40px;
+}
+
+.ttl-30 {
+    font-size: 24px;
+}
+
+/* ------ header ------ */
+
+.header-wrapper {
+    padding: 0 20px;
+}
+
+/* ------ hero ------ */
+
+.hero-text {
+    bottom: -10%;
+    left: 43%;
+}
+
+.hero-ttl-en {
+    font-size: 75px;
+}
+
+.hero-ttl-ja {
+    font-size: 17px;
+}
+
+/* ------ mission ------ */
+
+.mission-wrapper {
+    padding-bottom: 50px;
+}
+
+.mission-ttl {
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.mission-content {
+    padding: 30px 0;
+}
+
+/* ------ project ------ */
+
+.project-content {
+    width: 100%;
+}
+
+/* ------ aboutus ------ */
+
+.aboutus-text {
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.aboutus-content {
+    margin: 25px 0;
+}
+
+.aboutus-ttl-pc {
+    display: block;
+}
+
+.aboutus-ttl-tablet {
+    display: none;
+}
+
+.aboutus-ttl {
+    margin-bottom: 20px;
+}
+
+/* ------ vision ------ */
+
+.vision-item {
+    max-width: none;
+    width: 100%;
+    padding: 10px 20px 30px 20px;
+    border: #fff 1px solid;
+    margin-bottom: 20px;
+}
+
+.vision-ttl {
+    margin-bottom: 20px;
+}
+
+.ttl-en-s {
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.mg-rb-30 {
+    margin: 0 0 30px 0;
+}
+
+/* ------ company ------ */
+
+#company > .wrapper-1440 > .section-ttl {
+    margin-bottom: 15px;
+}
+
+.company-info {
+    margin-right: 0;
+}
+
+.company-info th, .company-info td {
+    padding: 25px 0;
+}
+
+.company-info th {
+    width: 25%;
+    font-weight: bold;
+}
+
+.googlemap {
+    height: 400px;
+}
+
+/* ------ contact ------ */
+
+.checkbox-group {
+    gap: 20px;
+}
+
+.privacy-item {
+    margin: 10px 0;
+}
+
+.privacy-ttl {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.privacy-text {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.privacy-list {
+    padding-left: 20px;
+}
+
+.button-wrapper {
+    margin-top: 40px;
+}
+
+/* ------ button ------ */
+
+.button-main {
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+}
+
+/* ------ footer ------ */
+
+.footer-wrapper {
+    width: 85%;
+    margin: 30px 0 60px 0;
+}
+
+.footer-top {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.footer-menu {
+    flex-wrap: wrap;
+}
+
+.footer-menu-item {
+    width: 50%;
+    padding: 12px 0;
+}
+
+.footer-bottom {
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.copyright-pc {
+    display: none;
+}
+
+.copyright-sp {
+    display: block;
+    font-size: 11px;
+    color: #777;
+}
+
+footer .sns-icon {
+    margin-bottom: 40px;
+}
+
+/* ------ thanks.html ------ */
+
+.thanks{
+    padding: 120px 0 60px 0;
+}
+
+.button2 {
+    width: 100%;
+    height: 60px;
+    line-height: 30px;
+}
+
+}
