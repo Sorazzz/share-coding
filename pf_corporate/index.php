@@ -23,12 +23,12 @@ $_SESSION['token'] = $token;
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/messages_ja.js"></script>
 </head>
-<body>
+<body id="home">
     <header>
         <div class="wrapper-900">
             <div class="header-tab">
                 <h1 class="header-logo">
-                    <a href="index.html"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
+                    <a href="index.php"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
                 </h1>
                 <button id="hamburger" class="hamburger">
                     <span></span>
@@ -39,12 +39,13 @@ $_SESSION['token'] = $token;
         </div>
         <div id="header-wrapper" class="header-wrapper">
             <h1 class="header-logo logo-none">
-                <a href="index.html"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
+                <a href="index.php"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
             </h1>
             <div class="header-right">
                 <nav>
                     <ul>
                         <div class="header-menu">
+                            <li class="header-menu-item"><a href="#home">HOME</a></li>
                             <li class="header-menu-item"><a href="#mission">MISSION</a></li>
                             <li class="header-menu-item"><a href="#project">PROJECT</a></li>
                             <li class="header-menu-item"><a href="#aboutus">ABOUT US</a></li>
@@ -365,8 +366,8 @@ $_SESSION['token'] = $token;
                         <div class="button-wrapper">
                             <input type="submit" name="submit" value="内容を送信する" id="submit" class="button-main hover">
                         </div>
-                    </form>
                     <input type="hidden" name="token" value="<?php echo $token; ?>">
+                    </form>
                 </div>
             </div>
         </div>

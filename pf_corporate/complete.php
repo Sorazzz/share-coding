@@ -70,7 +70,7 @@ if ($token != "" && $token == $session_token) {
         <div class="wrapper-900">
             <div class="header-tab">
                 <h1 class="header-logo">
-                    <a href="index.html"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
+                    <a href="index.php"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
                 </h1>
                 <button id="hamburger" class="hamburger">
                     <span></span>
@@ -81,12 +81,13 @@ if ($token != "" && $token == $session_token) {
         </div>
         <div id="header-wrapper" class="header-wrapper">
             <h1 class="header-logo logo-none">
-                <a href="index.html"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
+                <a href="index.php"><img src="images/logo.png" alt="ソーシャルテックのロゴ"></a>
             </h1>
             <div class="header-right">
                 <nav>
                     <ul>
                         <div class="header-menu">
+                            <li class="header-menu-item"><a href="#home">HOME</a></li>
                             <li class="header-menu-item"><a href="#mission">MISSION</a></li>
                             <li class="header-menu-item"><a href="#project">PROJECT</a></li>
                             <li class="header-menu-item"><a href="#aboutus">ABOUT US</a></li>
@@ -96,12 +97,6 @@ if ($token != "" && $token == $session_token) {
                         </div>
                     </ul>
                 </nav>
-                <span class="header-line"></span>
-                <div class="sns-content">
-                    <a href="https://x.com" target="_blank"><img src="images/sns-icons/logo-black.png" alt="X" class="sns-icon mg-r-30"></a>
-                    <a href="https://www.instagram.com" target="_blank"><img src="images/sns-icons/Instagram_Glyph_Gradient.png" alt="Instagram" class="sns-icon mg-r-30"></a>
-                    <a href="https://www.facebook.com" target="_blank"><img src="images/sns-icons/Facebook_Logo_Primary.png" alt="Facebook" class="sns-icon"></a>
-                </div>
             </div>
         </div>
     </header>
@@ -109,8 +104,8 @@ if ($token != "" && $token == $session_token) {
     <main>
         <div class="thanks">
             <div class="wrapper-900">
-                <p class="title-30 mg-30-bottom br-pc"><?php echo $thanks ?></p>
-                <p class="title-30 mg-30-bottom br-tab"><?php echo $thanks ?></p>
+                <h2 class="ttl-30 mg-b-30 br-pc"><?php echo $thanks ?></h2>
+                <h2 class="ttl-30 mg-b-30 br-tab"><?php echo $thanks ?></h2>
                 <p><?php echo $thanks2 ?></p>
                 <div class="button-wrapper">
                     <button class="button2"><a href="index.php">TOPへ戻る</a></button>
@@ -137,13 +132,12 @@ if ($token != "" && $token == $session_token) {
                 </nav>
             </div>
             <div class="footer-bottom">
-                <p><small class="copyright-pc">&copy; 2021 SocialTech, Inc. All Rights Reserved.</small></p>
                 <div class="sns-content">
                     <a href="https://x.com" target="_blank"><img src="images/sns-icons/logo-white.png" alt="X" class="sns-icon mg-r-30"></a>
                     <a href="https://www.instagram.com" target="_blank"><img src="images/sns-icons/Instagram_Glyph_White.png" alt="Instagram" class="sns-icon mg-r-30"></a>
                     <a href="https://www.facebook.com" target="_blank"><img src="images/sns-icons/Facebook_Logo_Secondary.png" alt="Facebook" class="sns-icon"></a>
                 </div>
-                <small class="copyright-sp">&copy; 2021 SocialTech, Inc. All Rights Reserved.</small>
+                <p><small class="copyright">&copy; SocialTech, Inc. All Rights Reserved.</small></p>
             </div>
         </div>
     </footer>
