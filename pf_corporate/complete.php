@@ -87,13 +87,13 @@ if ($token != "" && $token == $session_token) {
                 <nav>
                     <ul>
                         <div class="header-menu">
-                            <li class="header-menu-item"><a href="#home">HOME</a></li>
-                            <li class="header-menu-item"><a href="#mission">MISSION</a></li>
-                            <li class="header-menu-item"><a href="#project">PROJECT</a></li>
-                            <li class="header-menu-item"><a href="#aboutus">ABOUT US</a></li>
-                            <li class="header-menu-item"><a href="#vision">VISION</a></li>
-                            <li class="header-menu-item"><a href="#company">COMPANY</a></li>
-                            <li class="header-menu-item"><a href="#contact">CONTACT</a></li>
+                            <li class="header-menu-item"><a href="index.php#home">HOME</a></li>
+                            <li class="header-menu-item"><a href="index.php#mission">MISSION</a></li>
+                            <li class="header-menu-item"><a href="index.php#project">PROJECT</a></li>
+                            <li class="header-menu-item"><a href="index.php#aboutus">ABOUT US</a></li>
+                            <li class="header-menu-item"><a href="index.php#vision">VISION</a></li>
+                            <li class="header-menu-item"><a href="index.php#company">COMPANY</a></li>
+                            <li class="header-menu-item"><a href="index.php#contact">CONTACT</a></li>
                         </div>
                     </ul>
                 </nav>
@@ -121,12 +121,12 @@ if ($token != "" && $token == $session_token) {
                 <nav>
                     <ul>
                         <div class="footer-menu">
-                            <li class="footer-menu-item"><a href="#mission">MISSION</a></li>
-                            <li class="footer-menu-item"><a href="#project">PROJECT</a></li>
-                            <li class="footer-menu-item"><a href="#aboutus">ABOUT US</a></li>
-                            <li class="footer-menu-item"><a href="#vision">VISION</a></li>
-                            <li class="footer-menu-item"><a href="#company">COMPANY</a></li>
-                            <li class="footer-menu-item"><a href="#contact">CONTACT</a></li>
+                            <li class="footer-menu-item"><a href="index.php#mission">MISSION</a></li>
+                            <li class="footer-menu-item"><a href="index.php#project">PROJECT</a></li>
+                            <li class="footer-menu-item"><a href="index.php#aboutus">ABOUT US</a></li>
+                            <li class="footer-menu-item"><a href="index.php#vision">VISION</a></li>
+                            <li class="footer-menu-item"><a href="index.php#company">COMPANY</a></li>
+                            <li class="footer-menu-item"><a href="index.php#contact">CONTACT</a></li>
                         </div>
                     </ul>
                 </nav>
