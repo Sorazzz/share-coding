@@ -27,19 +27,6 @@
   overflow: hidden;
 }
 
-// .lawn01 {
-//   background-image: url(../images/deco-1-1.png);
-
-//   // background-position: right 20px center;
-// }
-
-// .lawn02 {
-
-//   background-image: url(../images/deco-1-2.png);
-//   background-repeat: no-repeat;
-//   // background-position: right 20px center;
-// }
-
 // =====================================================
 //  共通
 // =====================================================
@@ -228,28 +215,55 @@ header {
 }
 
 .HeaderWrap {
-  display: none;
+  position: fixed;
+  top: 65px;
+  right: 11%;
   width: 300px;
   padding: 15px 30px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
-  position: absolute;
-  top: 65px;
-  right: 11%;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
   z-index: 9999;
 
   &.active {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
   }
   li {
     padding: 25px 0;
     border-bottom: 1px solid #DEDEDE;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: var(--delay);
   }
   a {
     color: #010A39;
+  }
+}
+
+.MenuItem {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: var(--delay);
+
+  a {
+    display: block;
+    font-size: 24px;
+    color: #010A39;
+    text-decoration: none;
+    padding: 20px 0;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -271,6 +285,24 @@ header {
     transform: translateX(0);
 }
 
+// ---------- メニューのアニメーション ----------
+
+.HeaderMenu li:nth-child(1) {
+    --delay: 0.1s;
+}
+
+.HeaderMenu li:nth-child(1) {
+    --delay: 0.2s;
+}
+
+.HeaderMenu li:nth-child(1) {
+    --delay: 0.3s;
+}
+
+.HeaderMenu li:nth-child(1) {
+    --delay: 0.4s;
+}
+
 // =====================================================
 //  MV
 // =====================================================
@@ -278,6 +310,9 @@ header {
 .mv {
   height: 1080px;
   position: relative;
+  background-image: url(../images/deco-1-1.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .MvTtl {
@@ -290,6 +325,12 @@ header {
 // =====================================================
 //  WORK
 // =====================================================
+
+#work {
+  padding-top: 130px;
+  background-image: url(../images/deco-1-2.svg);
+  background-repeat: no-repeat;
+}
 
 .WorkWrap {
   max-width: 1440px;
@@ -330,6 +371,9 @@ header {
 #aboutme {
   display: flex;
   justify-content: space-between;
+  // background-image: url(../images/deco-1-3.svg);
+  // background-repeat: no-repeat;
+  // background-position: top center;
 }
 
 .AboutWrap{ 

@@ -194,30 +194,55 @@ header button {
 }
 
 .HeaderWrap {
-  display: none;
+  position: fixed;
+  top: 65px;
+  right: 11%;
   width: 300px;
   padding: 15px 30px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
-  position: absolute;
-  top: 65px;
-  right: 11%;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
   z-index: 9999;
 }
 .HeaderWrap.active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 .HeaderWrap li {
   padding: 25px 0;
   border-bottom: 1px solid #DEDEDE;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: var(--delay);
 }
 .HeaderWrap a {
   color: #010A39;
 }
 
+.MenuItem {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: var(--delay);
+}
+.MenuItem a {
+  display: block;
+  font-size: 24px;
+  color: #010A39;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hamburger.is-active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -234,9 +259,28 @@ header button {
   transform: translateX(0);
 }
 
+.HeaderMenu li:nth-child(1) {
+  --delay: 0.1s;
+}
+
+.HeaderMenu li:nth-child(1) {
+  --delay: 0.2s;
+}
+
+.HeaderMenu li:nth-child(1) {
+  --delay: 0.3s;
+}
+
+.HeaderMenu li:nth-child(1) {
+  --delay: 0.4s;
+}
+
 .mv {
   height: 1080px;
   position: relative;
+  background-image: url(../images/deco-1-1.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 .MvTtl {
@@ -244,6 +288,12 @@ header button {
   left: 10%;
   bottom: 0;
   z-index: 9998;
+}
+
+#work {
+  padding-top: 130px;
+  background-image: url(../images/deco-1-2.svg);
+  background-repeat: no-repeat;
 }
 
 .WorkWrap {
