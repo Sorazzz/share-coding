@@ -1,10 +1,22 @@
 @charset "UTF-8";
-#starry_sky {
+#starry_sky, #starry_sky02 {
   width: 100%;
   position: relative;
-  background: #2F2480;
   background: linear-gradient(180deg, rgb(47, 36, 128) 0%, rgb(111, 54, 123) 100%);
   overflow: hidden;
+}
+
+#starry_sky02 {
+  top: -600px;
+}
+@media screen and (max-width: 375px) {
+  #starry_sky02 {
+    top: -350px;
+  }
+}
+
+.starry_h_top {
+  height: 100vh;
 }
 
 .star {
@@ -20,9 +32,15 @@
     transform: scale(0.2);
   }
 }
-.WorkLawn {
-  position: relative;
-  overflow: hidden;
+.fade {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 body {
@@ -32,6 +50,11 @@ body {
   line-height: 1.5rem;
   color: #010A39;
 }
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 a {
   color: #fff;
@@ -40,16 +63,38 @@ a {
 h1 {
   font-size: 36px;
   font-weight: bold;
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 2000;
+}
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+    bottom: 12%;
+  }
 }
 
 h2 {
   font-size: 30px;
   font-weight: bold;
 }
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 26px;
+  }
+}
 
 h3 {
   font-size: 24px;
   font-weight: bold;
+}
+@media screen and (max-width: 375px) {
+  h3 {
+    font-size: 22px;
+  }
 }
 
 h4 {
@@ -70,7 +115,7 @@ li {
 }
 
 .ttl {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
   color: #fff;
 }
@@ -84,7 +129,7 @@ button {
 .MainBtn {
   width: 360px;
   height: 80px;
-  margin-top: 50px;
+  margin: 50px auto 0;
   font-size: 20px;
   background-color: transparent;
   border: 1px solid #fff;
@@ -95,12 +140,27 @@ button {
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
+@media screen and (max-width: 375px) {
+  .MainBtn {
+    width: 295px;
+    height: 60px;
+    margin-top: 40px;
+    font-size: 15px;
+    background-size: 40px;
+    background-position: right 15px center;
+  }
+}
 
 .pagination {
-  margin-top: 60px;
+  margin: 60px auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 375px) {
+  .pagination {
+    margin-top: 40px;
+  }
 }
 
 .PaginationWrap {
@@ -108,6 +168,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 375px) {
+  .PaginationWrap {
+    margin: 0 20px;
+  }
 }
 .PaginationWrap .active {
   background-color: #fff;
@@ -124,12 +189,25 @@ button {
   border-radius: 50%;
   background-color: transparentred;
 }
+@media screen and (max-width: 375px) {
+  .PaginationWrap p {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 8px;
+  }
+}
 
 .Pagebtn {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media screen and (max-width: 375px) {
+  .Pagebtn {
+    gap: 0;
+  }
 }
 
 .BtnPrev {
@@ -139,6 +217,13 @@ button {
   background-size: 50px;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 375px) {
+  .BtnPrev {
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+  }
+}
 
 .BtnNext {
   width: 50px;
@@ -147,11 +232,23 @@ button {
   background-size: 50px;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 375px) {
+  .BtnNext {
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+  }
+}
 
 .back {
-  margin: 0 150px;
+  margin: 0 60px;
   text-decoration: underline;
   color: #fff;
+}
+@media screen and (max-width: 375px) {
+  .back {
+    margin: 0 50px;
+  }
 }
 
 header {
@@ -161,6 +258,17 @@ header button {
   position: absolute;
   top: 40px;
   right: 11%;
+}
+@media screen and (max-width: 1440px) {
+  header button {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header button {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .hamburger {
@@ -175,6 +283,12 @@ header button {
   cursor: pointer;
   z-index: 10000;
 }
+@media screen and (max-width: 375px) {
+  .hamburger {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 .Headerspan {
   width: 24px;
@@ -184,7 +298,6 @@ header button {
   justify-content: space-between;
   position: fixed;
   cursor: pointer;
-  z-index: 10000;
 }
 .Headerspan span {
   height: 3px;
@@ -207,6 +320,19 @@ header button {
   pointer-events: none;
   z-index: 9999;
 }
+@media screen and (max-width: 768px) {
+  .HeaderWrap {
+    top: 50px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .HeaderWrap {
+    top: 45px;
+    width: 280px;
+    padding: 20px 40px;
+  }
+}
 .HeaderWrap.active {
   opacity: 1;
   pointer-events: auto;
@@ -218,6 +344,9 @@ header button {
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease forwards;
   animation-delay: var(--delay);
+}
+.HeaderWrap li:nth-child(4) {
+  border: none;
 }
 .HeaderWrap a {
   color: #010A39;
@@ -231,10 +360,8 @@ header button {
 }
 .MenuItem a {
   display: block;
-  font-size: 24px;
   color: #010A39;
   text-decoration: none;
-  padding: 20px 0;
 }
 
 @keyframes fadeInUp {
@@ -275,81 +402,231 @@ header button {
   --delay: 0.4s;
 }
 
-.mv {
-  height: 1080px;
-  position: relative;
-  background-image: url(../images/deco-1-1.svg);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
-
-.MvTtl {
+.meandc {
   position: absolute;
-  left: 10%;
-  bottom: 0;
-  z-index: 9998;
+  left: 12%;
+  bottom: 25%;
+  z-index: 2001;
+}
+@media screen and (max-width: 375px) {
+  .meandc {
+    max-width: 132px;
+    left: 10%;
+  }
 }
 
-#work {
-  padding-top: 130px;
-  background-image: url(../images/deco-1-2.svg);
-  background-repeat: no-repeat;
+.work_top {
+  padding: 630px 0 220px;
+  background-image: url(../images/deco-1-1.svg), url(../images/deco-1-2.svg), linear-gradient(1deg, rgb(32, 83, 75) 0%, rgb(32, 83, 75) 70%, rgb(105, 132, 83) 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top center, bottom center, center top 543px;
+  position: relative;
+  z-index: 1000;
+}
+@media screen and (max-width: 375px) {
+  .work_top {
+    padding: 400px 0 140px;
+    background-image: url(../images/deco-1-1_sp.svg), url(../images/deco-1-2_sp.svg), linear-gradient(1deg, rgb(32, 83, 75) 0%, rgb(32, 83, 75) 70%, rgb(105, 132, 83) 100%);
+    background-position: top center, bottom center, center top 200px;
+  }
+}
+
+.work_top {
+  top: -600px;
+}
+@media screen and (max-width: 375px) {
+  .work_top {
+    top: -350px;
+  }
 }
 
 .WorkWrap {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .WorkWrap {
+    max-width: none;
+    padding: 0 20px;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .WorkWrap {
+    gap: 10px;
+  }
+}
 
 .WorkBox {
-  max-width: 460px;
+  max-width: 31%;
+  width: 100%;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
   border-radius: 20px;
 }
+@media screen and (max-width: 896px) {
+  .WorkBox {
+    max-width: 48%;
+  }
+}
+@media screen and (max-width: 789px) {
+  .WorkBox {
+    max-width: 47%;
+  }
+}
+@media screen and (max-width: 539px) {
+  .WorkBox {
+    max-width: 46%;
+  }
+}
+@media screen and (max-width: 414px) {
+  .WorkBox {
+    max-width: 45%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .WorkBox {
+    max-width: 48%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
 .WorkBox a {
   color: #010A39;
 }
 .WorkBox img {
-  max-width: 420px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 896px) {
+  .tab-sp-none {
+    display: none;
+  }
 }
 
 .TextBox {
   padding-top: 20px;
 }
+@media screen and (max-width: 375px) {
+  .TextBox {
+    padding-top: 5px;
+  }
+}
 .TextBox h3, .TextBox p {
   padding-bottom: 15px;
 }
+@media screen and (max-width: 375px) {
+  .TextBox h3, .TextBox p {
+    padding-bottom: 5px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .TextBox h3 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .TextBox p {
+    font-size: 12px;
+  }
+}
+
+.chicken {
+  position: absolute;
+  right: 3%;
+  bottom: 50%;
+}
+@media screen and (max-width: 1630px) {
+  .chicken {
+    top: 20%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .chicken {
+    max-width: 60px;
+  }
+}
+
+.PicImg {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .PicImg {
+    display: block;
+    max-width: 25%;
+    position: absolute;
+    bottom: -7%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .PicImg {
+    max-width: 38%;
+  }
+}
 
 #aboutme {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .AboutWrap {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .AboutWrap {
+    padding: 0 20px;
+    display: block;
+  }
 }
 
 .AboutBox {
   max-width: 800px;
+  width: 100%;
+}
+@media screen and (max-width: 1410px) {
+  .AboutBox {
+    max-width: none;
+  }
 }
 
 .AboutBoxTop {
   margin-bottom: 100px;
 }
+@media screen and (max-width: 375px) {
+  .AboutBoxTop {
+    margin-bottom: 60px;
+  }
+}
 .AboutBoxTop h2 {
   margin-bottom: 60px;
+}
+@media screen and (max-width: 375px) {
+  .AboutBoxTop h2 {
+    margin-bottom: 40px;
+  }
 }
 
 .AboutBoxBottom h3 {
   margin-bottom: 50px;
+}
+@media screen and (max-width: 375px) {
+  .AboutBoxBottom h3 {
+    margin-bottom: 40px;
+  }
 }
 .AboutBoxBottom h4 {
   margin-bottom: 20px;
@@ -360,11 +637,27 @@ header button {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media screen and (max-width: 375px) {
+  .SkillBoxWrap {
+    gap: 25px;
+  }
+}
 
 .SkillBox {
-  max-width: 370px;
+  max-width: 48%;
+  width: 100%;
   padding-bottom: 30px;
   border-bottom: 1px solid #8D6FA3;
+}
+@media screen and (max-width: 1410px) {
+  .SkillBox {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .SkillBox {
+    padding-bottom: 25px;
+  }
 }
 
 h4::before {
@@ -377,57 +670,244 @@ h4::before {
   background-repeat: no-repeat;
   margin-right: 10px;
 }
+@media screen and (max-width: 375px) {
+  h4::before {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+  }
+}
 
 .AboutImg {
   padding-left: 100px;
   position: relative;
+  z-index: 1001;
+}
+@media screen and (max-width: 1024px) {
+  .AboutImg {
+    position: static;
+    padding-left: 0px;
+  }
+}
+
+.EarthImg {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .EarthImg {
+    display: block;
+    max-width: 15%;
+    position: absolute;
+    top: 24%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .EarthImg {
+    max-width: 22%;
+    top: 27%;
+  }
 }
 
 .RightImg {
   max-width: 520px;
+  position: relative;
+  z-index: 1002;
+}
+@media screen and (max-width: 1024px) {
+  .RightImg {
+    display: none;
+  }
 }
 
 .ContactImg {
-  max-width: 225px;
+  max-width: 40%;
+  position: absolute;
+  right: 50%;
+  bottom: -7%;
+  z-index: 1003;
+}
+@media screen and (max-width: 1410px) {
+  .ContactImg {
+    bottom: 20%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ContactImg {
+    max-width: 30%;
+    right: 0;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 375px) {
+  .ContactImg {
+    max-width: 40%;
+    bottom: -3%;
+  }
 }
 
 footer {
   padding: 60px 0;
   background-color: #010A39;
 }
+@media screen and (max-width: 375px) {
+  footer {
+    padding: 40px 20px;
+  }
+}
+
+.footer_top {
+  position: relative;
+  top: -600px;
+}
+@media screen and (max-width: 375px) {
+  .footer_top {
+    top: -350px;
+  }
+}
+
+.FooterWrap {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .FooterWrap {
+    max-width: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  .FooterWrap {
+    display: block;
+    justify-content: baseline;
+    font-size: 12px;
+  }
+}
+.FooterWrap ul {
+  max-width: none;
+  display: flex;
+  gap: 50px;
+}
+@media screen and (max-width: 375px) {
+  .FooterWrap ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .FooterWrap p {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
 
 small {
   font-size: 12px;
   color: #fff;
 }
-
-.FooterWrap {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+@media screen and (max-width: 375px) {
+  small {
+    font-size: 10px;
+  }
 }
-.FooterWrap ul {
-  display: flex;
-  gap: 50px;
+
+.work {
+  width: 100%;
+  padding: 130px 0 350px;
+  background-image: url(../images/deco-2.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+}
+@media screen and (max-width: 375px) {
+  .work {
+    padding: 100px 0 200px;
+    background-image: url(../images/deco-2_sp.svg);
+  }
+}
+
+.chicken_2 {
+  position: absolute;
+  left: 12%;
+  bottom: 10%;
+  z-index: 4000;
+}
+@media screen and (max-width: 1180px) {
+  .chicken_2 {
+    bottom: 18%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .chicken_2 {
+    bottom: 18%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .chicken_2 {
+    bottom: 41%;
+    max-width: 60px;
+  }
+}
+
+.detail {
+  width: 100%;
+  padding: 130px 0 350px;
+  background-image: url(../images/deco-2.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4000;
+}
+@media screen and (max-width: 375px) {
+  .detail {
+    padding: 100px 0 200px;
+    background-image: url(../images/deco-2_sp.svg);
+  }
 }
 
 .DetailWrap {
+  padding: 0 20px;
+}
+
+.DetailInner {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
   padding: 50px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
 }
-.DetailWrap h2 {
+@media screen and (max-width: 375px) {
+  .DetailInner {
+    padding: 20px;
+  }
+}
+.DetailInner h2 {
   margin-bottom: 30px;
   text-decoration: underline;
 }
-.DetailWrap h2 a {
+@media screen and (max-width: 375px) {
+  .DetailInner h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}
+.DetailInner h2 a {
   color: #010A39;
 }
-.DetailWrap h2::after {
+.DetailInner h2::after {
   content: "";
   display: inline-block; /* ← 画像サイズ・マージン調整するために追加 */
   width: 20px; /* 画像の幅 */
@@ -437,8 +917,21 @@ small {
   background-repeat: no-repeat;
   margin-left: 20px;
 }
-.DetailWrap p {
+@media screen and (max-width: 375px) {
+  .DetailInner h2::after {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+    margin-left: 10px;
+  }
+}
+.DetailInner p {
   margin-bottom: 30px;
+}
+@media screen and (max-width: 375px) {
+  .DetailInner p {
+    margin-bottom: 20px;
+  }
 }
 
 .DetailItem {
@@ -457,7 +950,6 @@ small {
 }
 
 .DetailImg {
-  max-width: 1000px;
   padding: 50px;
   border-radius: 16px;
   display: flex;
@@ -465,8 +957,41 @@ small {
   align-items: center;
   background-color: #F5F4FA;
 }
+@media screen and (max-width: 375px) {
+  .DetailImg {
+    padding: 20px;
+  }
+}
 .DetailImg img {
-  max-width: 900px;
+  max-width: 100%;
+}
+
+.chicken_3 {
+  position: absolute;
+  right: 19%;
+  bottom: 30%;
+  z-index: 4000;
+}
+@media screen and (max-width: 925px) {
+  .chicken_3 {
+    bottom: 34%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .chicken_3 {
+    bottom: 38%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .chicken_3 {
+    bottom: 43%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .chicken_3 {
+    bottom: 58%;
+    max-width: 60px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

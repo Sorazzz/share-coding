@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="130" viewBox="0 0 375 130">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_319" data-name="長方形 319" width="375" height="130" transform="translate(9198 9446)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.105" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#859756"/>
+      <stop offset="1" stop-color="#0a4549"/>
+    </linearGradient>
+  </defs>
+  <g id="deco-2_sp" transform="translate(-9198 -9446)" clip-path="url(#clip-path)">
+    <ellipse id="楕円形_114" data-name="楕円形 114" cx="2179" cy="791" rx="2179" ry="791" transform="translate(8164 9406)" fill="#063d41"/>
+    <ellipse id="楕円形_115" data-name="楕円形 115" cx="2179" cy="791.5" rx="2179" ry="791.5" transform="translate(6573 9452)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

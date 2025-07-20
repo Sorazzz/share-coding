@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="200" viewBox="0 0 375 200">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_307" data-name="長方形 307" width="375" height="200" transform="translate(-4422 339)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_315" data-name="長方形 315" width="375" height="1575" transform="translate(-5861 339)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="長方形_314" data-name="長方形 314" width="1328" height="843" transform="translate(0.288 0.264)" fill="#fff"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#859756"/>
+      <stop offset="1" stop-color="#0a4549"/>
+    </linearGradient>
+  </defs>
+  <g id="deco-1-1_sp" transform="translate(4422 -339)" clip-path="url(#clip-path)">
+    <g id="deco-1_sp" transform="translate(1439)" clip-path="url(#clip-path-2)">
+      <g id="マスクグループ_37" data-name="マスクグループ 37" transform="translate(-6062.288 1089.736)" clip-path="url(#clip-path-3)">
+        <ellipse id="楕円形_108" data-name="楕円形 108" cx="2326.5" cy="844" rx="2326.5" ry="844" transform="translate(-1258.712 -844.736)" fill="#063d41"/>
+      </g>
+      <ellipse id="楕円形_109" data-name="楕円形 109" cx="2326.5" cy="844" rx="2326.5" ry="844" transform="translate(-9119 270)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
